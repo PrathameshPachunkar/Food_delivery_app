@@ -57,7 +57,7 @@ class RecentOrder extends StatelessWidget {
               borderRadius: BorderRadius.circular(30)
             ),
             child: IconButton(onPressed: (){}, icon: Icon(Icons.add,color: Colors.white,size: 30,))
-          )
+          ),
         ],
       ),
     );
