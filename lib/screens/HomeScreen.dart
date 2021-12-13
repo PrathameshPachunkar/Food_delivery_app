@@ -5,6 +5,7 @@ import 'package:flutter_food_delivery_ui/data/data.dart';
 import 'package:flutter_food_delivery_ui/models/restaurant.dart';
 import 'package:flutter_food_delivery_ui/widgets/RAting.dart';
 import 'package:flutter_food_delivery_ui/widgets/RecentOreder_widget.dart';
+import 'CartScreen.dart';
 import 'restaurentscreen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -111,7 +112,9 @@ return Column(
         centerTitle: true,
         title: Text('Food Delivery'),
         actions: [
-          TextButton(onPressed: (){}, child: Text('Cart(${currentUser.cart.length})',style: TextStyle(color: Colors.white,fontSize: 20),)),
+          TextButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (_) =>CartScreen()));
+          }, child: Text('Cart(${currentUser.cart.length})',style: TextStyle(color: Colors.white,fontSize: 20),)),
         ],
       ),
       body: ListView(
